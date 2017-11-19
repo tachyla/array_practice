@@ -91,24 +91,30 @@
         return (personA > personB) ? -1 : 1;
 
       });
-      console.log(longestLifeSpan);
+      //console.log(longestLifeSpan);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
 
-    const category = document.querySelector(".mw-category");
-    const links = [...category.querySelectorAll("a")];
-    //convert the nodeList to array with the spread operator
+    // const category = document.querySelector(".mw-category");
+    // const links = [...category.querySelectorAll("a")];
+    // //convert the nodeList to array with the spread operator
 
-    const de = links
-                  .map(link => link.textContent)
-                  .filter(streetName => streetName.includes("de"));
+    // const de = links
+    //               .map(link => link.textContent)
+    //               .filter(streetName => streetName.includes("de"));
 
  
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    //const alphabetically = inventors.sort()
+    const alphabetically = people.sort((personA, personB) => {
+      const [aLast, aFirst] = personA.split(", ");
+      const [bLast, bFirst] = personB.split(", ");
+      return aLast > bLast ? 1 : -1;
+      //REVERSE the sorting order by changeing 1 for -1
+    });
+      console.log(alphabetically);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
