@@ -7,7 +7,6 @@
 <body>
   <p><em>Just a Smart Brown Girl Coding here</em>💻 🙋🏾</p>
   <script>
-    // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
 
     // Some data we can work with
@@ -78,10 +77,21 @@
       return total + (inventor.passed - inventor.year);
     }, 0)
     //one inventor life length = inventor.passed - inventor.year
-    console.log(totalYears);
+    //console.log(totalYears);
 
 
     // 5. Sort the inventors by years lived
+
+      const longestLifeSpan = inventors.sort(function(a,b) {
+      //get each inventors age
+        const personA = a.passed - a.year;
+        const personB = b.passed - b.year;
+
+        //sort by their lifeSpan 
+        return (personA > personB) ? -1 : 1;
+
+      });
+      console.log(longestLifeSpan);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
