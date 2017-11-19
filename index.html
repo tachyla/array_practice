@@ -97,8 +97,15 @@
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
 
+    const category = document.querySelector(".mw-category");
+    const links = [...category.querySelectorAll("a")];
+    //convert the nodeList to array with the spread operator
+
+    const de = links.map(link => link.textContent);
+ 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    //const alphabetically = inventors.sort()
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
