@@ -114,12 +114,23 @@
       return aLast > bLast ? 1 : -1;
       //REVERSE the sorting order by changeing 1 for -1
     });
-      console.log(alphabetically);
+      //console.log(alphabetically);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const transportation = data.reduce(function (obj, item) {
+      //initialize item with 0
+      if(!obj[item]){
+        obj[item] = 0;
+      }
+      obj[item]++;
+      return obj;
+      //start with a blank object
+      }, {} )
+
+    console.log(transportation);
   </script>
 </body>
 </html>
